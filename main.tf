@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "my_state_bucket" {
-  bucket = "talent-academy-account_id-tfstates-pascal"
+  bucket = "talent-academy-account_id-tfstates-darryl"
 
   versioning {
     enabled = true
