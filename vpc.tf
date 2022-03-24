@@ -17,7 +17,7 @@ resource "aws_subnet" "public" {
     }
 }
 
-esource "aws_subnet" "privateapp" {
+resource "aws_subnet" "privateapp" {
     vpc_id = aws_vpc.main.id
     cidr_block = "192.168.2.0/24"
     availability_zone = "us-east-1a"
