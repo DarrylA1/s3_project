@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "my_project_bucket" {
-    bucket = "talent-academy-686520628199-tfstates-darryl"
+    bucket = "darryl-talent-academy-686520628199-tfstates-darryl"
 
     lifecycle {
       prevent_destroy = true
