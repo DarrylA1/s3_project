@@ -1,16 +1,20 @@
-resource "aws_s3_bucket" "my_state_bucket" {
-  bucket = "talent-academy-account_id-tfstates-darryl"
+resource "aws_s3_bucket" "my_project_bucket" {
+    bucket = "talent-academy-686520628199-tfstates-darryl"
 
-  versioning {
-    enabled = true
-  }
+    lifecycle {
+      prevent_destroy = true
+    }
 
-  lifecycle {
-    prevent_destroy = true
-  }
+    tags = {
+        Name = "talent-academy-686520628199-tfstates"
+        Environment = "Test"
+    }
+}
 
-  tags = {
-    Name        = "talent-academy-tfstates"
-    Environment = "Test"
+resource "aws_s3_bucket_versioning" "version_my_bucket" {
+  bucket = aws_s3_bucket.my_project_bucket.id
+
+  versioning_configuration {
+    status = "Enabled"
   }
 }
