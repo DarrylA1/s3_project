@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "my_project_bucket" {
+resource "aws_s3_bucket" "darryl-talent-academy-686520628199-tfstates-darryl" {
     bucket = "darryl-talent-academy-686520628199-tfstates-darryl"
 
     lifecycle {
@@ -12,9 +12,10 @@ resource "aws_s3_bucket" "my_project_bucket" {
 }
 
 resource "aws_s3_bucket_versioning" "version_my_bucket" {
-  bucket = aws_s3_bucket.my_project_bucket.id
+  bucket = aws_s3_bucket.darryl-talent-academy-686520628199-tfstates-darryl.id
 
   versioning_configuration {
     status = "Enabled"
   }
 }
+
